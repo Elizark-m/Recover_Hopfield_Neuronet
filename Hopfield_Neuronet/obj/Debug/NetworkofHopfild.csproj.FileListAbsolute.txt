@@ -1,0 +1,30 @@
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.exe.config
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.exe
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.pdb
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.Form1.resources
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.Properties.Resources.resources
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csproj.GenerateResource.Cache
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csproj.CoreCompileInputs.cache
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.exe
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.pdb
+D:\ПОЛИТЕХ\3 курс\2_part\Нейронные сети\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csprojResolveAssemblyReference.cache
+c:\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.exe.config
+c:\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.exe
+c:\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.pdb
+c:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csprojResolveAssemblyReference.cache
+c:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.Form1.resources
+c:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.Properties.Resources.resources
+c:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csproj.GenerateResource.cache
+c:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csproj.CoreCompileInputs.cache
+c:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.exe
+c:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.pdb
+F:\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.exe.config
+F:\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.exe
+F:\NetworkofHopfild\NetworkofHopfild\bin\Debug\NetworkofHopfild.pdb
+F:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csprojAssemblyReference.cache
+F:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.Form1.resources
+F:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.Properties.Resources.resources
+F:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csproj.GenerateResource.cache
+F:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.csproj.CoreCompileInputs.cache
+F:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.exe
+F:\NetworkofHopfild\NetworkofHopfild\obj\Debug\NetworkofHopfild.pdb
