@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{037AA511-E642-4CB2-BB7E-96A02FD2FDB1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>NetworkofHopfild</RootNamespace>
-    <AssemblyName>NetworkofHopfild</AssemblyName>
+    <RootNamespace>Hopfield_Neuronet</RootNamespace>
+    <AssemblyName>Hopfield_Neuronet</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
