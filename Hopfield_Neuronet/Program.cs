@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NetworkofHopfild
+namespace Hopfield_Neuronet
 {
     static class Program
     {
