@@ -49,24 +49,20 @@ namespace Hopfield_Neuronet
             // create double array size of image files count
             double[][] input = new double[outputcount][];
 
-            // for every .bmp file create bitmap and
+            // for every .bmp file create bitmap and array for data
             foreach (FileInfo file in dir.EnumerateFiles("*.bmp"))
-            {
-                //создаем битовую карту изображения file с размером 10x10
+            {                
                 Bitmap img = new Bitmap(Image.FromFile(file.FullName), 10,10);
-                //находим количество пикселей в картинке = длина картинки * высота картинки
                 inputCount = img.Height * img.Width;
-                //создаем массив в input[imgC] по размерру равному количеству пикселей в картинке
                 input[imgC] = new double[inputCount];
 
-                //в цикле по размеру картинки
+                // filling data from image
                 for (int i = 0, l = 0; i < img.Width; i++)
                 {
                     for (int j = 0; j < img.Height; j++)
-                    {
-                        //узнаем цвет пикселя
+                    {                        
                         Color c = img.GetPixel(i, j);
-                        //если пиксель закрашен, то записываем в массив input[imgC] '1', иначе '-1'
+                        // transform pixel color to digit, if black -> '1', else '-1'
                         if (c.R == 0 && c.G == 0 && c.B == 0) input[imgC][l] = 1;
                         else input[imgC][l] = -1;
                         l++;
@@ -75,7 +71,7 @@ namespace Hopfield_Neuronet
 
                 imgC++;
             }
-            //возвращаем двойной массив input 
+            
             return input;
         }
 
