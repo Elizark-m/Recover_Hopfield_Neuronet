@@ -18,23 +18,22 @@ namespace Hopfield_Neuronet
             // forming data line from image
             inputCount = img.Height * img.Width;
 
-            //создаем массив по длине матрицы
+            // create array size of dataline count
             double[] input = new double[inputCount];
 
-            //в цикле по длине и ширине картинки
+            // get data from image
             for (int i = 0, l = 0; i < img.Width; i++)
             {
                 for (int j = 0; j < img.Height; j++)
-                {
-                    //узнаем цвет пикселя
+                {                    
                     Color c = img.GetPixel(i, j);
-                    //если пиксель закрашен записываем в массив input '1', иначе записываем '-1'
+                    // transform pixel color to digit, if black -> '1', else '-1'
                     if (c.R == 0 && c.G == 0 && c.B == 0) input[l] = 1;
                     else input[l] = -1;
                     l++;
                 }
             }
-            //возвращаем массив input
+            
             return input;
         }
         
@@ -45,12 +44,12 @@ namespace Hopfield_Neuronet
             // count files .bmp
             outputcount = dir.EnumerateFiles("*.bmp").Count();
             
-            
-            int imgC = 0; //счетчик изображений
-            //создаем двойной массив input размером по количеству файлов в директории
+            // current image counter
+            int imgC = 0; 
+            // create double array size of image files count
             double[][] input = new double[outputcount][];
 
-            //в цикле по каждому файлу в директории с расширением .bmp
+            // for every .bmp file create bitmap and
             foreach (FileInfo file in dir.EnumerateFiles("*.bmp"))
             {
                 //создаем битовую карту изображения file с размером 10x10
