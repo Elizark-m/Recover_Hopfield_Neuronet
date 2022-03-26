@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkofHopfild
+namespace Hopfield_Neuronet
 {
     class DataClass
     {
@@ -15,7 +15,7 @@ namespace NetworkofHopfild
 
         public double[] GetImg(Bitmap img)
         {
-            //задаем длину матрицы? = длина картинки * ширина картинки
+            // forming data line from image
             inputCount = img.Height * img.Width;
 
             //создаем массив по длине матрицы
@@ -40,11 +40,12 @@ namespace NetworkofHopfild
         
         public double[][] GetImg()
         {
-            //указываем директорию с данными
+            // save image directory
             DirectoryInfo dir = new DirectoryInfo(@"..\..\data");
-            //подсчитываем количество файлов с расширением .bmp
+            // count files .bmp
             outputcount = dir.EnumerateFiles("*.bmp").Count();
-
+            
+            
             int imgC = 0; //счетчик изображений
             //создаем двойной массив input размером по количеству файлов в директории
             double[][] input = new double[outputcount][];
