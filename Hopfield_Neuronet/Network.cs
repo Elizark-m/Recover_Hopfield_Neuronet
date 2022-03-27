@@ -14,102 +14,109 @@ namespace NetworkofHopfild
 
         public Network(double[][] inputs)
         {
-            //сохраняем входные данные
+            // save input data
             this.inputs = inputs;
-            //создаем сеть
+            // create neuronet matrix
             Create();
-            //обучаем сеть
+            // start study neuronet
             Study();
         }
-
+        
+        // create neuronet matrix
         private void Create()
         {
-            //создаем матрицу размером [размер inputs[0], размер inputs[0]]
+            // create neuronet matrix [size of inputs[0], size of inputs[0]]
             matrix = new double[inputs[0].Length][];
             for(int i=0; i<matrix.Length;i++)
             {
                 matrix[i] = new double[inputs[0].Length];
             }
         }
-
+        
+        // start neuronet studing ( filling matrix )
         private void Study()
         {
-            //в цикле по двойному массиву inputs и матрице
+            // for each picture data in inputs and squared each data element in picture data filling matrix
             for (int pic = 0; pic < inputs.Length; pic++)
             {
                 for (int i = 0; i < inputs[pic].Length; i++)
                 { 
                     for (int j = 0; j < inputs[pic].Length; j++)
                     {
-                        //если координаты ячейки матрицы равно, то ячейка равна '0', иначе += inputs[pic][i] * inputs[pic][j]
+                        // if matrix coordinate is equal, value in this element is '0', 
+                        // else value sum multiplying inputs picture data [i] by inputs picture data [j]
                         if (i == j) matrix[i][j] = 0;
-                        //W=W+Xk*X
                         else matrix[i][j] += inputs[pic][i] * inputs[pic][j];
                     }
                 }
 
             }
         }
-
+        
+        // try to difine 
         public double[] Definition(double[] damage)
         {
-            //массив temp по размеру длины массива поврежденного изображения
+            // create temporal array size of damage picture data
             double[] temp = new double[damage.Length];
-            //массив res по размеру длины массива поврежденного изображения
+            // create result array size of damagge picture data
             double[] res = new double[damage.Length];
 
-            bool was = false;
+            // create finish flag
+            bool isEqual = false;
 
-            //массив step1 по размеру длины массива поврежденного изображения
+            // create step1 array size of damagge picture data
             double[] step1 = new double[damage.Length];
-            //массив step2 по размеру длины массива поврежденного изображения
+            // create step2 array size of damagge picture data
             double[] step2 = new double[damage.Length];
 
-            //в бесконечном цикле
             while(true)
             {
-                //сохраняем сумму произведений step1 * damage   W*y=y'
+                // save sum multiplication step1 matrix and damage picture matrix
                 step1 = MultiplyVector(step1, damage);
-                //приводим к стабильным значениям Если >=0 то 1, иначе -1
+                // stabilise step1 results, if matrix element >= 0 set '1', else '-1'
                 step2 = funcSign(step1);
 
-                //записываем в переменную was совпадают ли массивы step1 и temp 
-                was = step1.SequenceEqual(temp);
-                //если совпадают, то выходим из цикла
-                if (was) break;
-                //иначе сохраняем в буфер temp значение step1
-                temp = step1;
+                // check step1 equals temp, it's finish recover flag
+                isEqual = step2.SequenceEqual(temp);
+                // finish recover, if equals is true
+                if (isEqual) break;
+                // else save step1 results in temp for next step
+                temp = step2;
             }
-            //возвращаем step1
-            return step1;
+            // return stabilised results
+            return step2;
         }
 
+        //  multiplying picture data by matrix
         private double[] MultiplyVector(double[] temp, double[] damage)
         {
-            //в цикле размеру массива matrix
+            // foreach 
             for (int i = 0; i < matrix.Length; i++)
-            {   //обнуляем temp
+            {   
+                // clear temp
                 temp[i] = 0;
-                //в цике по массиву matrix[] находим сумму произведений matrix * damage W*y'=y'*
+                // foreach element in matrix[] save in temp sum multipying damage * matrix
                 for (int j = 0; j < matrix[i].Length; j++)
                 {
                     temp[i] += matrix[i][j] * damage[j];
                 }
             }
-            //возвращаем temp
+            
+            //return results
             return temp;
         }
-
+        
+        // stabilise results, if matrix element >= 0 set '1', else '-1'
         private double[] funcSign(double[] arr)
         {
-            //в цикле по массиву arr 
+            // for each element in array, if element value >= 0, set '1', else '-1'
             for(int i=0;i<arr.Length;i++)
             {
-                //если значение >= 0, значение =1, иначе -1
                 if (arr[i] >= 0) arr[i] = 1;
                 else arr[i] = -1;
             }
-            //возвращает массив arr
+            
+            // return results
             return arr;
         }
     }
